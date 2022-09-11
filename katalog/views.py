@@ -6,7 +6,7 @@ def show_katalog(request):
     data_barang_katalog = CatalogItem.objects.all()
     context = {
     'list_catalog': data_barang_katalog,
-    'nama': 'Rafi Rasendrya Favian',
+    'nama': 'RAFI RASENDRYA FAVIAN',
     'npm' : '2106751581'
 }
 
