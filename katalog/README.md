@@ -9,11 +9,11 @@ Pemrograman Berbasis Platform (CSGE602022) - diselenggarakan oleh Fakultas Ilmu 
 pbp-tugas2-papian.herokuapp.com/katalog
 
 ### Bagan request client ke web aplikasi berbasis Django
-![Gambar]('../../Pola%20Django%20Req%20Client%20-%20Rafi%20Rasendrya%20Favian.png?raw=true')
+![Gambar]('../../PolaDjangoReqClient%20-%20RafiRasendryaFavian.png?raw=true')
 
 Penjelasan :
 
-Bagan / Pola request client ke web aplikasi berbasis Django berawal dari permintaan masuk (request) ke dalam server Django yang akan diproses melalui urls (urls.py) untuk diteruskan ke views (views.py) yang telah didefinisikan oleh pengembang untuk memproses permintaan tersebut. Jika terdapat proses data yang membutuhkan keterlibatan database, maka nantinya views akan memanggil respon data (query) ke models lalu database akan mengembalikan hasil dari query tersebut ke views. Setelah permintaan telah selesai diproses, Hasil proses tersebut akan ditampilkan ke dalam HTML yang sudah didefinisikan sebelum nanti HTML tersebut dikembalikan ke pengguna (user) sebagai respons.
+Bagan / Pola request client ke web aplikasi berbasis Django berawal dari permintaan masuk (request) ke dalam server Django yang akan diproses melalui urls (urls.py) untuk diteruskan ke views (views.py) yang telah didefinisikan oleh pengembang untuk memproses permintaan tersebut. Jika terdapat proses data yang membutuhkan keterlibatan database, maka nantinya views akan memanggil respon data (query) ke models lalu database akan mengembalikan hasil dari query tersebut ke views. Setelah permintaan telah selesai diproses, Hasil proses tersebut akan ditampilkan ke dalam HTML yang sudah didefinisikan sebelum nanti HTML tersebut dikembalikan ke client sebagai respons.
 
 ### Kenapa menggunakan virtual environment? Apakah kita tetap dapat membuat aplikasi web berbasis Django tanpa menggunakan virtual environment?
 
