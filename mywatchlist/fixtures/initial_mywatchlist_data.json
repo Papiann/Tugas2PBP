@@ -1,0 +1,113 @@
+[
+    {
+        "model": "mywatchlist.mywatchlist",
+        "pk": 1,
+        "fields": {
+            "film_watched": "Yes",
+            "film_title": "Mencuri Raden Saleh",
+            "film_rating": "4.8/5",
+            "release_date": "August 25th, 2022",
+            "film_review": "Best action heist Indonesia film that have a lot plot twist, cool scene shot camera, and cast by many Indonesian best actor."
+        }
+    },
+    {
+        "model": "mywatchlist.mywatchlist",
+        "pk": 2,
+        "fields": {
+            "film_watched": "Yes",
+            "film_title": "Thor: Love and Thunder",
+            "film_rating": "4.1/5",
+            "release_date": "July 6th, 2022",
+            "film_review": "Literally popcorn movie, action comedy film that fill with many funny jokes and sometimes give some iconic scene from another film."
+        }
+    },
+    {
+        "model": "mywatchlist.mywatchlist",
+        "pk": 3,
+        "fields": {
+            "film_watched": "Yes",
+            "film_title": "Doctor Strange in the Multiverse of Madness",
+            "film_rating": "4.6/5",
+            "release_date": "May 5th, 2022",
+            "film_review": "Best MARVEL movies after Avenger Endgame and Spiderman No Way Home, this film is very fantastic with a multiverse story and magic trick."
+        }
+    },
+    {
+        "model": "mywatchlist.mywatchlist",
+        "pk": 4,
+        "fields": {
+            "film_watched": "Yes",
+            "film_title": "Spider-Man: No Way Home",
+            "film_rating": "4.7/5",
+            "release_date": "December 15th, 2021",
+            "film_review": "Stunning MARVEL movies that makes me feel nostalgic after Andrew Garfield and Tobey Maguire show up and reunite with Tom Holland as 3 Spiderman."
+        }
+    },
+    {
+        "model": "mywatchlist.mywatchlist",
+        "pk": 5,
+        "fields": {
+            "film_watched": "Yes",
+            "film_title": "Crash Landing On You",
+            "film_rating": "4.5/5",
+            "release_date": "December 14th, 2019",
+            "film_review": "First Korean movies that i've watched with beautiful action romantic genre and makes me want to watch more another korean movies."
+        }
+    },
+    {
+        "model": "mywatchlist.mywatchlist",
+        "pk": 6,
+        "fields": {
+            "film_watched": "No",
+            "film_title": "Parasite",
+            "film_rating": "-",
+            "release_date": "June 21st, 2019",
+            "film_review": "I can't give my review because i haven't watch it :( but my girlfriend say this film is great."
+        }
+    },
+    {
+        "model": "mywatchlist.mywatchlist",
+        "pk": 7,
+        "fields": {
+            "film_watched": "No",
+            "film_title": "Top Gun: Maverick",
+            "film_rating": "-",
+            "release_date": "May 27th, 2022",
+            "film_review": "Nope, i haven't watch this film too, but another people say this film is amazing."
+        }
+    },
+    {
+        "model": "mywatchlist.mywatchlist",
+        "pk": 8,
+        "fields": {
+            "film_watched": "Yes",
+            "film_title": "Lupin",
+            "film_rating": "4.9/5",
+            "release_date": "January 8th, 2021",
+            "film_review": "Fantastic and mindblowing heist film with a beautiful place in Paris and give so many plot twist."
+        }
+    },
+    {
+        "model": "mywatchlist.mywatchlist",
+        "pk": 9,
+        "fields": {
+            "film_watched": "Yes",
+            "film_title": "Money Heist",
+            "film_rating": "5/5",
+            "release_date": "May 2nd, 2017",
+            "film_review": "Speachless... great tactic, collaboration, dodgy, plot twist and so many complex situation in this film that makes me feel so amaze. I LIKE IT :)"
+        }
+    },
+    {
+        "model": "mywatchlist.mywatchlist",
+        "pk": 10,
+        "fields": {
+            "film_watched": "Yes",
+            "film_title": "Incantation",
+            "film_rating": "4.3/5",
+            "release_date": "March 18th, 2022",
+            "film_review": "Horror Taiwan movies that bring another POV with documentary vlog point of view camera that makes me feel like join in that situation."
+        }
+    }
+
+]
