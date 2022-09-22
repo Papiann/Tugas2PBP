@@ -34,7 +34,7 @@ Jawab :
 - Menambahkan model baru bernama 'MyWatchList' pada 'mywatchlist/models.py' dengan atribut 'film_watched', 'film_title', 'film_rating', 'release_date', dan 'film_review'. Selanjutnya melakukan migrasi dengan menggunakan command 'python manage.py makemigrations' dan  'python manage.py migrate'
 - Membuat folder 'fixtures' yang didalamnya terdapat sebuah berkas 'initial_mywatchlist_data.json' yang berisi 10 data yang ditambahkan untuk objek 'MyWatchList' serta melakukan loaddata dengan perintah command 'python manage.py loaddata initial_mywatchlist_data.json
 - Membuat beberapa fungsi dengan parameter request pada views.py untuk menyajikan data dalam bentuk HTML, XML, dan JSON serta melakukan routing dengan menambahkan path url pada 'urls.py'.
-
+- Terakhir, melakukan git add, commit dan push ke repository github yang telah terkoneksi dengan aplikasi heroku agar otomatis ke deploy.
 
 #
 
