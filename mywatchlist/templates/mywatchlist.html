@@ -2,18 +2,18 @@
 
 {% block content %}
 
-  <h1 style= "text-align:center; background-color: #2B4865; border-radius: 10px 10px 10px 10px; color: rgb(255, 255, 255); padding: 10px; font-family: 'verdana'; box-shadow: 5px 5px 5px #131e2c;"
+  <h1 style= "text-align:center; background-color: #477265; border-radius: 10px 10px 10px 10px; color: rgb(255, 255, 255); padding: 10px; font-family: 'verdana'; box-shadow: 5px 5px 5px #22302c;"
   >Tugas 3 Assignment PBP/PBD</h1>
   
-<body style= "font-family: 'verdana'; padding: 15px; background-color: #112033; color: #F2F2F2;">
-  <h5 style= "font-size: 24px;">Name :</h5>
-  <p style= "font-size: 20px;">{{nama}}</p>
+<body style= "font-family: 'verdana'; padding: 15px; background-color: #233f42; color: #F2F2F2;">
+  <h5 style= "font-size: 24px; text-shadow: 3px 3px 3px #22302c;">Name :</h5>
+  <p style= "font-size: 20px; text-shadow: 3px 3px 3px #22302c;">{{nama}}</p>
 
-  <h5 style= "font-size: 24px;"> Student ID: </h5>
-  <p style= "padding-bottom: 20px; font-size: 20px;">{{npm}}</p>
+  <h5 style= "font-size: 24px; text-shadow: 3px 3px 3px #22302c;"> Student ID: </h5>
+  <p style= "padding-bottom: 20px; font-size: 20px; text-shadow: 3px 3px 3px #22302c;">{{npm}}</p>
 
-  <table style= "padding: 12px 15px; border-collapse: collapse; border-radius: 10px 10px 10px 10px; overflow: hidden; box-shadow: 8px 8px 8px #131e2c;">
-    <tr style= "text-transform: uppercase; background-color: #256D85;">
+  <table style= "padding: 12px 15px; border-collapse: collapse; border-radius: 10px 10px 10px 10px; overflow: hidden; box-shadow: 8px 8px 8px #22302c;">
+    <tr style= "text-transform: uppercase; background-color: #477265;">
       <th style= "padding: 10px;">Watched</th>
       <th style= "padding: 10px;">Movie Title</th>
       <th style= "padding: 10px;">Rating</th>
@@ -31,5 +31,7 @@
     </tr>
     {% endfor %}
   </table>
+
+  <h5 style="text-align: center; font-size: 24px; background-color: #477265; border-radius: 10px 10px 10px 10px; color: rgb(255, 255, 255); padding: 10px; box-shadow: 5px 5px 5px #22302c;"> {{pesan}} </h5>
 </body>
  {% endblock content %}
