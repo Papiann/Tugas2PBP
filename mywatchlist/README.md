@@ -36,6 +36,7 @@ Jawab :
 - Membuat beberapa fungsi dengan parameter request pada views.py untuk menyajikan data dalam bentuk HTML, XML, dan JSON serta melakukan routing dengan menambahkan path url pada 'urls.py'.
 - Terakhir, melakukan git add, commit dan push ke repository github yang telah terkoneksi dengan aplikasi heroku agar otomatis ke deploy.
 
+
 #
 
 ## POSTMAN
