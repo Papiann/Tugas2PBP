@@ -52,5 +52,33 @@ def login_user(request):
 # LOGOUT
 def logout_user(request):
     logout(request)
+    response = HttpResponseRedirect(reverse('todolist:login'))
+    response.delete_cookie('last_login')
     return redirect('todolist:login')
+
+# CREATE TASK
+def create_task(request):
+    if request.method == 'POST':
+        title = request.POST.get('title')
+        description = request.POST.get('description')
+        date = datetime.datetime.now()
+        user = request.user
+        is_finished = False
+        Task.objects.create(title=title, description=description, date=date, user=user, is_finished=is_finished)
+        response = HttpResponseRedirect(reverse("todolist:show_todolist")) 
+        return response
+
+    return render(request, "create.html")
+
+# DELETE
+def delete(request, pk):
+    Task.objects.filter(id=pk).delete()
+    return redirect('todolist:show_todolist')
+
+# OPTIONS
+def options(request, pk):
+    data = Task.objects.get(id=pk)
+    data.is_finished = not(data.is_finished)
+    data.save()
+    return redirect('todolist:show_todolist')
 
