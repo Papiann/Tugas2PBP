@@ -16,6 +16,7 @@
         <th style= "padding: 10px;">Description✏️</th>
         <th style= "padding: 10px;">Status🚨</th>
         <th style= "padding: 10px;">Options🛠️</th>
+        <th style= "padding: 10px;">Delete⛔</th>
       </tr>
       {% comment %} Add the data below this line {% endcomment %}
       {% for todo in list_todolist %}
@@ -32,9 +33,11 @@
         </td>
         <td style="background-color: #8FE3CF;">
             <button style= "text-align:center; background-color: rgb(255, 255, 255); border-radius: 10px 10px 10px 10px; color: rgb(255, 255, 255); padding: 10px; font-family: 'verdana'; font-size: 15px;">
-                <a href="{% url 'todolist:delete' todo.id %}" title="">Delete</a></button>
-            <button style= "text-align:center; background-color: rgb(255, 255, 255); border-radius: 10px 10px 10px 10px; color: rgb(255, 255, 255); padding: 10px; font-family: 'verdana'; font-size: 15px;">
                 <a href="{% url 'todolist:options' todo.id %}" title="">Change Status</a></button>
+        </td>
+        <td style= "text-align: center; padding: 12px; background-color: #85d1bf">
+            <button style= "text-align:center; background-color: rgb(255, 255, 255); border-radius: 10px 10px 10px 10px; color: rgb(255, 255, 255); padding: 10px; font-family: 'verdana'; font-size: 15px;">
+                <a href="{% url 'todolist:delete' todo.id %}" title="">Delete</a></button>
         </td>
       </tr>
       {% endfor %}
