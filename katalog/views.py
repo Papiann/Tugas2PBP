@@ -8,6 +8,6 @@ def show_katalog(request):
     'list_catalog': data_barang_katalog,
     'nama': 'RAFI RASENDRYA FAVIAN',
     'npm' : '2106751581'
-}
+    }
 
     return render(request, "katalog.html", context)
