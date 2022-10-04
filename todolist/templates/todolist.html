@@ -2,138 +2,76 @@
 
 {% block content %}
 
+<!-- BOOTSTRAP -->
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+
 <!-- Style HTML-->
 <style>
     /* JUDUL */
-    .judul {
+    .mt-5 {
         text-align: center;
-        background-color: #477265; 
-        border-radius: 10px 10px 10px 10px; 
-        color: rgb(255, 255, 255); 
+        color: rgb(41, 41, 41); 
         padding: 10px; 
         font-family: 'verdana'; 
-        box-shadow: 5px 5px 5px #22302c;
+    }
+    .mb-5 {
+        text-align: center;
+        color: rgb(41, 41, 41); 
+        padding: 10px; 
+        font-family: 'verdana'; 
     }
     /* BODY TEMPLATE*/
     body {
         font-family: 'verdana'; 
         padding: 15px; 
-        background-color: #233f42; 
-        color: #ffffff;
-    }
-    /* HALOOO, USERNAME */
-    .username {
-        text-align:center; 
-        font-size: 24px; 
-        text-shadow: 3px 3px 3px #22302c;
-    }
-    /* KOTAK TABEL */
-    .tabel {
-        padding: 12px 15px; 
-        border-collapse: collapse; 
-        border-radius: 10px 10px 10px 10px; 
-        overflow: hidden; 
-        box-shadow: 8px 8px 8px #22302c; 
-        margin-left: auto; 
-        margin-right: auto;  
-    }
-    /* KOTAK JUDUL TABEL */
-    .boxJudulTabel {
-        text-transform: uppercase; 
-        background-color: #477265;
-    }
-    /* JUDUL TABEL */
-    .judulTabel {
-        padding: 10px;
-    }
-    /* FONT ISI TABEL */
-    .fontIsiTabel {
-        color: black;
-    }
-    /* KOLOM GANJIL */
-    .ganjil {
-        text-align: center; 
-        padding: 12px; 
-        background-color: #8FE3CF; 
-    }
-    /* KOLOM GENAP */
-    .genap {
-        text-align: center; 
-        padding: 12px; 
-        background-color: #85d1bf;
-    }
-    /* SESI LOGIN */
-    .sesiLogin {
-        text-align:center; 
-        background-color: #477265; 
-        border-radius: 10px 10px 10px 10px; 
-        color: rgb(255, 255, 255); 
-        padding: 10px; 
-        box-shadow: 5px 5px 5px #22302c;
-    }
-    /* BUTTON */
-    .tombol {
-        text-align:center; 
-        background-color: rgb(255, 255, 255); 
-        border-radius: 10px 10px 10px 10px; 
-        color: rgb(255, 255, 255); 
-        padding: 10px; 
-        font-family: 'verdana'; 
-        font-size: 15px;
+        background-image: linear-gradient(90deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
+        color: #000000;
     }
 </style>
-
-    <h1 class="judul">🥶 Tugas 4 Assignment PBP/PBD 🥶</h1>
-
+<nav class="navbar navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" style="text-align: center"href="#">A Todolist by Rafi Rasendrya Favian</a>
+    </div>
+</nav>
 <body>
-    <h5 class="username"> Halooo, {{username}}! 👋 </h5>
- 
-    <table class="tabel">
-      <tr class="boxJudulTabel">
-        <th class="judulTabel">Date📅</th>
-        <th class="judulTabel">Task Title📑</th>
-        <th class="judulTabel">Description✏️</th>
-        <th class="judulTabel">Status🚨</th>
-        <th class="judulTabel">Options🛠️</th>
-        <th class="judulTabel">Delete⛔</th>
-      </tr>
-      {% comment %} Add the data below this line {% endcomment %}
+    <h1 class="mt-5" style="font-size: 12mm;">👋Halooo, {{username}}👋</h1>
+    <h4 class="mb-5">😤 Yuk kerjain tugasnya! 😤 </h4>
+    
+    <div class="row row-cols-md-3 mx-auto" style="width: 90%;">
+      
       {% for todo in list_todolist %}
-      <tr class="fontIsiTabel">
-        <td class="ganjil">{{todo.date}}</td>
-        <td class="genap">{{todo.title}}</td>
-        <td class="ganjil">{{todo.description}}</td>
-        <td class="genap">
-            {% if todo.is_finished %}
-            Finished ✅
-            {% else %}
-            Not Finished ❌
-            {% endif%}
-        </td>
-        <td class="ganjil">
-            <button class="tombol">
-                <a href="{% url 'todolist:options' todo.id %}" title="">Change Status</a>
-            </button>
-        </td>
-        <td class="genap">
-            <button class="tombol">
-                <a href="{% url 'todolist:delete' todo.id %}" title="">Delete</a>
-            </button>
-        </td>
-      </tr>
+        <div class="col">
+            <div class="card border-primary mb-3">
+                <div class="card-body">
+                    
+                    <h3 class="card-title" style="padding-bottom: 5px">{{todo.title}}</h3>
+                    <h6 class="card-subtitle">📅{{todo.date}}</h6>
+                    <p class="card-text">🚨{{todo.description}}</p>
+                    <p class="card-text">
+                        {% if todo.is_finished %}
+                        ✅ Finished ✅
+                        {% else %}
+                        ❌ Not Finished ❌
+                        {% endif%}
+                    </p>
+    
+                    <p style="text-align: center;">
+                        <a style="width: 10rem;" class="btn login_btn btn btn-success form-control" href="options/{{todo.id}}">Change Status</a>
+                        <a style="width: 10rem;" class="btn login_btn btn btn-danger form-control lg" href="delete/{{todo.id}}">Delete</a>
+                    </p>
+                </div>
+            </div>
+        </div>
       {% endfor %}
-    </table>
-</body>
+    </div>
 
-<h5 class="sesiLogin">📲 Sesi terakhir login: {{ last_login }} 📲</h5>
-<table style= "margin-left: auto; margin-right: auto";>
-    <td>
-        <button class="tombol">
-            <a href="{% url 'todolist:create' %}">Create Task</a>
-        </button>
-        <button class="tombol">
-            <a href="{% url 'todolist:logout' %}">Logout</a>
-        </button>
-    </td>
-</table>
+    <p style="text-align: center; padding: 20px;">
+        <a style="width: 10rem" class="btn login_btn btn btn-dark form-control" href="{% url 'todolist:create' %}">Create</a>
+        <a style="width: 10rem" class="btn login_btn btn btn-dark form-control" href="{% url 'todolist:logout' %}">Logout</a>
+    </p>
+
+</body> 
 {% endblock content %}

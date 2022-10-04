@@ -37,18 +37,19 @@
     <div class = "login vh-100 d-flex justify-content-center align-items-center">
         <div class="card border-primary mb-3" style="width: 30rem; border-radius: 30px; box-shadow: 5px 5px 5px #22302c;">
             <div class="card-body">
-                <h1 style="padding: 5px 10px 30px 10px;">📱 LOGIN 📱</h1>
+                <h1>📱 LOGIN 📱</h1>
+                <h6 style="padding: 5px 10px 20px 10px;">a Todolist by Rafi Rasendrya Favian</h6>
 
                 <form method="POST" action="">
                     {% csrf_token %}
                     <table class="text-start table table-borderless vertical-align form-control">
                         <tr>
-                            <td class="paddingIsi">👨‍💻Username: </td>
+                            <td class="paddingIsi">👨‍💻Username:</td>
                             <td><input type="text" name="username" placeholder="Username" class="form-control"></td>
                         </tr>
                                 
                         <tr>
-                            <td class="paddingIsi">🔐Password  : </td>
+                            <td class="paddingIsi">🔐Password:</td>
                             <td><input type="password" name="password" placeholder="Password" class="form-control"></td>
                         </tr>
 
@@ -67,7 +68,7 @@
                     </ul>
                 {% endif %}     
                 <div style="padding-top: 20px;">   
-                Belum mempunyai akun🤔? <a href="{% url 'todolist:register' %}">Buat Akun</a>
+                Don't have an account🤔? <a href="{% url 'todolist:register' %}">Create Account</a>
                 </div> 
             </div>
         </div>
