@@ -40,7 +40,7 @@
     <h1 class="mt-5" style="font-size: 12mm;">👋Halooo, {{username}}👋</h1>
     <h4 class="mb-5">😤 Yuk kerjain tugasnya! 😤 </h4>
     
-    <div class="row row-cols-md-3 mx-auto" style="width: 90%;">
+    <div class="row row-cols-md-3 mx-auto" style="width: 100%;">
       
       {% for todo in list_todolist %}
         <div class="col">
@@ -59,8 +59,8 @@
                     </p>
     
                     <p style="text-align: center;">
-                        <a style="width: 10rem;" class="btn login_btn btn btn-success form-control" href="options/{{todo.id}}">Change Status</a>
-                        <a style="width: 10rem;" class="btn login_btn btn btn-danger form-control lg" href="delete/{{todo.id}}">Delete</a>
+                        <a style="width: 7rem;" class="btn login_btn btn btn-success form-control" href="options/{{todo.id}}">Status</a>
+                        <a style="width: 7rem;" class="btn login_btn btn btn-danger form-control lg" href="delete/{{todo.id}}">Delete</a>
                     </p>
                 </div>
             </div>
