@@ -2,56 +2,138 @@
 
 {% block content %}
 
-    <h1 style= "text-align:center; background-color: #477265; border-radius: 10px 10px 10px 10px; color: rgb(255, 255, 255); padding: 10px; font-family: 'verdana'; box-shadow: 5px 5px 5px #22302c;">
-        🥶 Tugas 4 Assignment PBP/PBD 🥶</h1>
-<body style= "font-family: 'verdana'; padding: 15px; background-color: #233f42; color: #ffffff;">
-    <h5 style= "text-align:center; font-size: 24px; text-shadow: 3px 3px 3px #22302c;">
-        Halooo, {{username}}! 👋 </h5>
-    <p style= "font-size: 20px; text-shadow: 3px 3px 3px #22302c;"></p>
+<!-- Style HTML-->
+<style>
+    /* JUDUL */
+    .judul {
+        text-align: center;
+        background-color: #477265; 
+        border-radius: 10px 10px 10px 10px; 
+        color: rgb(255, 255, 255); 
+        padding: 10px; 
+        font-family: 'verdana'; 
+        box-shadow: 5px 5px 5px #22302c;
+    }
+    /* BODY TEMPLATE*/
+    body {
+        font-family: 'verdana'; 
+        padding: 15px; 
+        background-color: #233f42; 
+        color: #ffffff;
+    }
+    /* HALOOO, USERNAME */
+    .username {
+        text-align:center; 
+        font-size: 24px; 
+        text-shadow: 3px 3px 3px #22302c;
+    }
+    /* KOTAK TABEL */
+    .tabel {
+        padding: 12px 15px; 
+        border-collapse: collapse; 
+        border-radius: 10px 10px 10px 10px; 
+        overflow: hidden; 
+        box-shadow: 8px 8px 8px #22302c; 
+        margin-left: auto; 
+        margin-right: auto;  
+    }
+    /* KOTAK JUDUL TABEL */
+    .boxJudulTabel {
+        text-transform: uppercase; 
+        background-color: #477265;
+    }
+    /* JUDUL TABEL */
+    .judulTabel {
+        padding: 10px;
+    }
+    /* FONT ISI TABEL */
+    .fontIsiTabel {
+        color: black;
+    }
+    /* KOLOM GANJIL */
+    .ganjil {
+        text-align: center; 
+        padding: 12px; 
+        background-color: #8FE3CF; 
+    }
+    /* KOLOM GENAP */
+    .genap {
+        text-align: center; 
+        padding: 12px; 
+        background-color: #85d1bf;
+    }
+    /* SESI LOGIN */
+    .sesiLogin {
+        text-align:center; 
+        background-color: #477265; 
+        border-radius: 10px 10px 10px 10px; 
+        color: rgb(255, 255, 255); 
+        padding: 10px; 
+        box-shadow: 5px 5px 5px #22302c;
+    }
+    /* BUTTON */
+    .tombol {
+        text-align:center; 
+        background-color: rgb(255, 255, 255); 
+        border-radius: 10px 10px 10px 10px; 
+        color: rgb(255, 255, 255); 
+        padding: 10px; 
+        font-family: 'verdana'; 
+        font-size: 15px;
+    }
+</style>
+
+    <h1 class="judul">🥶 Tugas 4 Assignment PBP/PBD 🥶</h1>
+
+<body>
+    <h5 class="username"> Halooo, {{username}}! 👋 </h5>
  
-    <table style= "padding: 12px 15px; border-collapse: collapse; border-radius: 10px 10px 10px 10px; overflow: hidden; box-shadow: 8px 8px 8px #22302c; margin-left: auto; margin-right: auto;">
-      <tr style= "text-transform: uppercase; background-color: #477265;">
-        <th style= "padding: 10px;">Date📅</th>
-        <th style= "padding: 10px;">Task Title📑</th>
-        <th style= "padding: 10px;">Description✏️</th>
-        <th style= "padding: 10px;">Status🚨</th>
-        <th style= "padding: 10px;">Options🛠️</th>
-        <th style= "padding: 10px;">Delete⛔</th>
+    <table class="tabel">
+      <tr class="boxJudulTabel">
+        <th class="judulTabel">Date📅</th>
+        <th class="judulTabel">Task Title📑</th>
+        <th class="judulTabel">Description✏️</th>
+        <th class="judulTabel">Status🚨</th>
+        <th class="judulTabel">Options🛠️</th>
+        <th class="judulTabel">Delete⛔</th>
       </tr>
       {% comment %} Add the data below this line {% endcomment %}
       {% for todo in list_todolist %}
-      <tr style=" color: black;">
-        <td style= "text-align: center; padding: 12px; background-color: #8FE3CF">{{todo.date}}</td>
-        <td style= "text-align: center; padding: 12px; background-color: #85d1bf">{{todo.title}}</td>
-        <td style= "text-align: center; padding: 12px; background-color: #8FE3CF">{{todo.description}}</td>
-        <td style= "text-align: center; padding: 12px; background-color: #85d1bf">
+      <tr class="fontIsiTabel">
+        <td class="ganjil">{{todo.date}}</td>
+        <td class="genap">{{todo.title}}</td>
+        <td class="ganjil">{{todo.description}}</td>
+        <td class="genap">
             {% if todo.is_finished %}
             Finished ✅
             {% else %}
             Not Finished ❌
             {% endif%}
         </td>
-        <td style="background-color: #8FE3CF;">
-            <button style= "text-align:center; background-color: rgb(255, 255, 255); border-radius: 10px 10px 10px 10px; color: rgb(255, 255, 255); padding: 10px; font-family: 'verdana'; font-size: 15px;">
-                <a href="{% url 'todolist:options' todo.id %}" title="">Change Status</a></button>
+        <td class="ganjil">
+            <button class="tombol">
+                <a href="{% url 'todolist:options' todo.id %}" title="">Change Status</a>
+            </button>
         </td>
-        <td style= "text-align: center; padding: 12px; background-color: #85d1bf">
-            <button style= "text-align:center; background-color: rgb(255, 255, 255); border-radius: 10px 10px 10px 10px; color: rgb(255, 255, 255); padding: 10px; font-family: 'verdana'; font-size: 15px;">
-                <a href="{% url 'todolist:delete' todo.id %}" title="">Delete</a></button>
+        <td class="genap">
+            <button class="tombol">
+                <a href="{% url 'todolist:delete' todo.id %}" title="">Delete</a>
+            </button>
         </td>
       </tr>
       {% endfor %}
     </table>
 </body>
 
-<h5 style= "text-align:center; background-color: #477265; border-radius: 10px 10px 10px 10px; color: rgb(255, 255, 255); padding: 10px; font-family: 'verdana'; box-shadow: 5px 5px 5px #22302c;">
-    📲 Sesi terakhir login: {{ last_login }} 📲</h5>
+<h5 class="sesiLogin">📲 Sesi terakhir login: {{ last_login }} 📲</h5>
 <table style= "margin-left: auto; margin-right: auto";>
     <td>
-        <button style= "text-align:center; background-color: rgb(255, 255, 255); border-radius: 10px 10px 10px 10px; color: rgb(255, 255, 255); padding: 10px; font-family: 'verdana'; font-size: 15px;">
-            <a href="{% url 'todolist:create' %}">Create Task</a></button>
-        <button style= "text-align:center; background-color: rgb(255, 255, 255); border-radius: 10px 10px 10px 10px; color: rgb(255, 255, 255); padding: 10px; font-family: 'verdana'; font-size: 15px;">
-            <a href="{% url 'todolist:logout' %}">Logout</a></button>
+        <button class="tombol">
+            <a href="{% url 'todolist:create' %}">Create Task</a>
+        </button>
+        <button class="tombol">
+            <a href="{% url 'todolist:logout' %}">Logout</a>
+        </button>
     </td>
 </table>
 {% endblock content %}
