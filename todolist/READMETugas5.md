@@ -57,7 +57,7 @@ Jawab :
 
  ✅ Lalu, kustomisasi halaman `todolist.html` dengan cara yang sama dengan `login.html`, `register.html`, `create.html` namun perbedaanya dalam pemanfaatan cards dari bootstrapnya. Pada `todolist.html` saya memasukkan setiap task yang dibuat menjadi satu cards dan membungkus cards cards tersebut dalam sebuah class yang mengatur baris dan kolom cards tersebut `<div class="row row-cols-md-3 mx-auto" style="width: 100%;">`. Oiyaa, saya juga menambahkan navbar dengan warna dark dan fixed top yang berarti tetap stay ada diatas ketika saya melakukan scroll kebawah pada halaman ini. Navbar tersebut saya memanfaatkan untuk menampilkan nama saya `a Todolist by Rafi Rasendrya Favian`.       
 
-✅  Kemudian, saya melakukan pengecekan terhadap seluruh halamnan apakah sudah responsive atau belum dengan melakukan inspect pada website, mengubah ubah ukuran website, dan mencoba mengakses website dengan HP. 
+✅  Kemudian, dikarenakan saya sudah menambahkan kode `<meta name="viewport" content="width=device-width, initial-scale=1.0">` pada seluruh halaman html (`login.html`, `register.html`, `create.html`, `todolist.html`). Otomatis seluruh halaman tersebut akan bersifat responsive. Saya tak pula mengeceknya dengan melakukan inspect pada website, mengubah ubah ukuran website, dan mencoba mengakses website dengan HP.
 
 ✅ Terakhir, saya membuat folder `css` yang berisi file `style.css` pada folder `static`. Didalam file `style.css` saya tambahkan kode CSS :
 ```
