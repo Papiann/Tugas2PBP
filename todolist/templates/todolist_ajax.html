@@ -102,6 +102,13 @@
                         <h3 class="card-title" style="padding-bottom: 5px">${todo.fields.title}</h3>
                         <h6 class="card-subtitle">📅${todo.fields.date}</h6>
                         <p class="card-text">🚨${todo.fields.description}</p>
+                        <div class="button">
+                            <div class="div_delete_btn">
+                                <button class="delete_btn">
+                                    <a class="delete_link" onclick="delete_todolist(${todo.pk})">❌ DELETE</a>
+                                </button>
+                            </div>
+                        </div>                
                     </div>
                 </div>
             </div>`
@@ -118,7 +125,15 @@
             return false
         }
 
+        function delete_todolist(id) {
+            console.log(id)
+            let url = "/todolist/delete/" + id;
+            fetch(url)
+        }
+
         document.getElementById("addtaskbutton").onclick = addTodolistModal
+
+
         refreshTodolist()
 
     </script>

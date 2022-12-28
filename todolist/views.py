@@ -110,3 +110,11 @@ def add(request):
         Task.objects.create(title=title, description=description, date=date, user=user)
          
         return HttpResponse(b"CREATED", status=201)
+
+# DELETE TASK JSON
+@login_required(login_url='/todolist/login/')
+def delete_task(request, id):
+    task = Task.objects.filter(user = request.user).get(pk = id)
+    task.delete()
+    
+    return HttpResponse(b"DELETED", status=201)
